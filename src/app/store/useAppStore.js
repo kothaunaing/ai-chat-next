@@ -88,7 +88,7 @@ const useAppStore = create((set, get) => ({
           );
 
           if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
+            console.log(`HTTP error! Status: ${response.status}`);
           }
 
           const data = await response.json();
@@ -111,13 +111,19 @@ const useAppStore = create((set, get) => ({
       }
 
       if (!responseData) {
-        console.error("Failed to fetch valid data after multiple attempts.");
+        console.log("Failed to fetch valid data after multiple attempts.");
       }
 
       return responseData;
     };
 
     const data = await fetchResponse();
+
+    if (!data) {
+      set({ loading: false });
+      return;
+    }
+
     const message = data.choices[0].message;
 
     const newMessages = [

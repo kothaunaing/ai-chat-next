@@ -12,7 +12,7 @@ const Header = () => {
   const { currentModel, setOpenSidebar } = useAppStore();
 
   return (
-    <header className="p-4 sticky inset-x-0 top-0 bg-black  mx-auto  ">
+    <header className="p-4 sticky inset-x-0 top-0 bg-black  mx-auto  z-20">
       <div className="flex justify-between items-start">
         <div className="flex items-start gap-x-2">
           <button

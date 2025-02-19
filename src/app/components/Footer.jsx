@@ -9,6 +9,8 @@ const Footer = ({ chatId }) => {
   const { fetchAIResponse, messages, setMessages, loading } = useAppStore();
 
   const handleSendMessage = async () => {
+    if (!prompt.trim()) return;
+
     const newMessagesUser = [...messages, { role: "user", content: prompt }];
     setMessages(newMessagesUser);
 

@@ -1,5 +1,6 @@
-import React from "react";
 import { create } from "zustand";
+
+const APIKEY = process.env.NEXT_PUBLIC_API_KEY;
 
 const useAppStore = create((set, get) => ({
   title: "AI Chat",
@@ -74,8 +75,7 @@ const useAppStore = create((set, get) => ({
             {
               method: "POST",
               headers: {
-                Authorization:
-                  "Bearer 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",
+                Authorization: `Bearer ${APIKEY}`,
                 "HTTP-Referer": "<YOUR_SITE_URL>",
                 "X-Title": "<YOUR_SITE_NAME>",
                 "Content-Type": "application/json",

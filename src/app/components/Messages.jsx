@@ -26,7 +26,7 @@ const Messages = () => {
               return (
                 <div key={index} className=" p-2 flex justify-end">
                   <MDEditor.Markdown
-                    className="p-3 rounded-md"
+                    className="p-3 rounded-md mmax-w-full overflow-auto break-words"
                     source={message.content}
                   />
                 </div>
@@ -37,7 +37,7 @@ const Messages = () => {
                   <div className="font-bold">{model.name}</div>
 
                   <MDEditor.Markdown
-                    className="p-3 rounded-md"
+                    className="p-3 rounded-md mmax-w-full overflow-auto break-words"
                     source={message.content}
                   />
                 </div>

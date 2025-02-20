@@ -7,7 +7,7 @@ import Messages from "./Messages";
 
 const ChatPage = ({ chatId }) => {
   return (
-    <div className="flex h-screen bg-black text-white">
+    <div className="flex min-h-screen bg-black text-white">
       <MobileSidebar />
 
       <Sidebar className="hidden md:block bg-black border-r border-r-gray-500 w-[300px] " />

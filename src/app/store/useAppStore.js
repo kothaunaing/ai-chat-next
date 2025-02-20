@@ -33,12 +33,36 @@ const useAppStore = create((set, get) => ({
       model: "meta-llama/llama-3.3-70b-instruct:free",
       description: "Meta's 70B LLM",
     },
+    {
+      id: 4,
+      name: "Dolphin3.0 R1 Mistral 24B",
+      model: "cognitivecomputations/dolphin3.0-r1-mistral-24b:free",
+      description: "",
+    },
+    {
+      id: 5,
+      name: "Gemini Pro 2.0 Experimental",
+      model: "google/gemini-2.0-pro-exp-02-05:free",
+      description: "",
+    },
+    {
+      id: 6,
+      name: "Llama 3.1 Nemotron 70B Instruct",
+      model: "nvidia/llama-3.1-nemotron-70b-instruct:free",
+      description: "",
+    },
+    {
+      id: 7,
+      name: "Phi-3 Medium 128K Instruct",
+      model: "microsoft/phi-3-medium-128k-instruct:free",
+      description: "",
+    },
   ],
   currentModel: {
-    id: 1,
-    name: "DeepSeek V3",
-    model: "deepseek/deepseek-chat:free",
-    description: "DeepSeek's latest model",
+    id: 3,
+    name: "Llama 3.3 70B Instruct",
+    model: "meta-llama/llama-3.3-70b-instruct:free",
+    description: "Meta's 70B LLM",
   },
   setCurrentModel: (model) => {
     set({ currentModel: model });

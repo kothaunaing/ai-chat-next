@@ -42,7 +42,10 @@ const Models = ({ isOpen, closeModels }) => {
           >
             <h1 className="font-bold">Models</h1>
 
-            <div className="mt-2">
+            <div
+              style={{ scrollbarWidth: "none" }}
+              className="mt-2 max-h-[250px] overflow-y-auto"
+            >
               <ul className="grid gap-1 w-full">
                 {models.map((model) => {
                   return (

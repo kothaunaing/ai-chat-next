@@ -8,7 +8,7 @@ const Messages = () => {
   const { getModelById, messages } = useAppStore();
 
   return (
-    <div
+    <main
       style={{ scrollbarWidth: "none" }}
       className="flex-1 overflow-y-auto m-2"
     >
@@ -45,7 +45,7 @@ const Messages = () => {
           Hello, How can I help you?
         </div>
       )}
-    </div>
+    </main>
   );
 };
 

@@ -139,12 +139,11 @@ const useAppStore = create((set, get) => ({
     set({ messages: newMessages });
 
     set({ loading: false });
-    scrollToBottom();
+  },
+  scrollToBottom: () => {
+    const messages = document.getElementById("messages-container");
+    messages.scrollTo({ top: messages.scrollHeight, behavior: "smooth" });
   },
 }));
-
-function scrollToBottom() {
-  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-}
 
 export default useAppStore;

@@ -1,14 +1,19 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import useAppStore from "../store/useAppStore";
 import MDEditor from "@uiw/react-md-editor";
 
 const Messages = () => {
-  const { getModelById, messages } = useAppStore();
+  const { getModelById, messages, scrollToBottom } = useAppStore();
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   return (
     <main
+      id="messages-container"
       style={{ scrollbarWidth: "none" }}
       className="flex-1 overflow-y-auto m-2"
     >

@@ -20,7 +20,8 @@ const Footer = ({ chatId }) => {
 
   return (
     <footer className="p-2 sticky inset-x-0 bottom-0 w-full flex gap-2 items-center bg-black max-w-3xl mx-auto">
-      <input
+      <textarea
+        style={{ scrollbarWidth: "none" }}
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
         className="flex-1 p-3 h-full border border-slate-400 rounded-lg outline-blue-700 bg-transparent"

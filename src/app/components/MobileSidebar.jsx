@@ -35,7 +35,7 @@ const MobileSidebar = () => {
   return (
     <AnimatePresence>
       {openSidebar && (
-        <div className="md:hidden fixed inset-0 bottom-0 bg-black/60  z-20">
+        <div className="md:hidden fixed inset-0 bottom-0 bg-black/60  z-30">
           <motion.div
             ref={popupRef}
             initial="closed"

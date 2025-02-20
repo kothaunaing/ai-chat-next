@@ -19,7 +19,7 @@ const Footer = ({ chatId }) => {
   };
 
   return (
-    <footer className="p-2 flex gap-2 mx-auto sticky bottom-0 inset-x-0 items-center bg-black">
+    <footer className="p-2 w-full flex gap-2 items-center bg-black max-w-3xl mx-auto">
       <input
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}

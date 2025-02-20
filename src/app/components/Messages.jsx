@@ -2,16 +2,16 @@
 
 import React from "react";
 import useAppStore from "../store/useAppStore";
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeHighlight from "rehype-highlight";
 import MDEditor from "@uiw/react-md-editor";
 
 const Messages = () => {
   const { getModelById, messages } = useAppStore();
 
   return (
-    <div className="min-h-[500px] m-2">
+    <div
+      style={{ scrollbarWidth: "none" }}
+      className="flex-1 overflow-y-auto m-2"
+    >
       {messages.length ? (
         <div>
           {messages.map((message, index) => {
